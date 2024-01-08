@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+h1 {
+    background-color: antiquewhite
+}
+body {
+    background-color: antiquewhite;
+}
+
+</style>
+</head>
+<body> 
+
+<h1>Find the Volume of a Rectangular Prism</h1>
+
+    <!--Input type is an integer or a float-->
+    <p>
+    Length: <input type="text" id="len">
+    </p>
+
+    <!--Input type is an integer or a float-->
+    <p>
+    Width: <input type="text" id="width">
+    </p>
+
+    <!--Input type is an integer or a float-->
+    <p>
+    Height: <input type="text" id="height">
+    </p>
+
+    <button type="button" onclick="myFunction()">Submit</button>
+    <p>Volume of the Rectangular Prism is:</p>
+    <p id="demo"></p>
+      
+
+    <button type="button" onclick="goMenu()">Home</button>
+
+    <script>
+
+
+    //This function stores the input values for the length, width, and height of the rectangular prism, 
+    //calculates the volume, and then sets it in the html
+    function myFunction() {
+        var x = document.getElementById("len").value;
+        var y = document.getElementById("width").value;
+        var z = document.getElementById("height").value;
+        var t = x*y*z;
+        document.getElementById("demo").innerHTML = t;
+    }
+
+    //Redirects page back to the menu page
+    function goMenu() {
+        window.location.href = '/'
+    }
+    </script>
+
+</body>
+</html>

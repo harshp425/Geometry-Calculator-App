@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+h1 {
+    background-color: antiquewhite
+}
+body {
+    background-color: antiquewhite;
+}
+ 
+</style>
+</head>
+<body> 
+
+<h1>Find the Area of a Triangle</h1>
+
+    <!--Input type is an integer or a float-->
+    <p>
+    Base: <input type="text" id="base">
+    </p>
+
+    <!--Input type is an integer or a float-->
+    <p>
+    Height: <input type="text" id="height">
+    </p>
+
+    <button type="button" onclick="myFunction()">Submit</button>
+    <p>Area of Triangle is:</p>
+    
+    <p id="demo"></p>
+    
+    <button type="button" onclick="goMenu()">Home</button>
+
+    <script>
+
+    //This function retrieves the inputted values of the base and height of the triangle. it then uses simple 
+    //algebra to compute and set the area of the triangle
+    function myFunction() {
+        var x = document.getElementById("base").value;
+        var y = document.getElementById("height").value;
+        var z = 1/2*x*y;
+        document.getElementById("demo").innerHTML = z;
+    }
+
+    //Redirects page back to the menu page
+    function goMenu() {
+        window.location.href = '/'
+    }
+    </script>
+
+</body>
+</html>

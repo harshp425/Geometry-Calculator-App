@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+h1 {
+    background-color: antiquewhite
+}
+body {
+    background-color: antiquewhite;
+}
+ 
+</style>
+</head>
+<body> 
+
+<h1>Find the Third Angle of a Triangle</h1>
+
+    <!--Input type is an integer or a float-->
+    <p>
+    Angle 1: <input type="text" id="a1">
+    </p>
+
+
+    <!--Input type is an integer or a float-->
+    <p>
+    Angle 2: <input type="text" id="a2">
+    </p>
+
+
+    <button type="button" onclick="myFunction()">Submit</button>
+    <p>The value for the third angle of this triangle is...</p>
+    
+    <p id="demo"></p>
+    
+    <button type="button" onclick="goMenu()">Home</button>
+
+    <script>
+
+    //This function stores the input values of the two angles and the uses simple algebra to calculate
+    //and show the value of the third angle    
+    function myFunction() {
+        var a = document.getElementById("a1").value;
+        var b = document.getElementById("a2").value;
+        var s = parseInt(a) + parseInt(b);
+        var z = 180 - s;
+        document.getElementById("demo").innerHTML = z;
+    }
+
+    //Redirects page back to the menu page
+    function goMenu() {
+        window.location.href = '/'
+    }
+    </script>
+
+</body>
+</html>

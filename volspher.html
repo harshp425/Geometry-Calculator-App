@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+h1 {
+    background-color: antiquewhite
+}
+body {
+    background-color: antiquewhite;
+}
+
+</style>
+</head>
+<body> 
+
+<h1>Find the Volume of a Sphere</h1>
+
+
+    <!--Input type is an integer or a float-->
+    <p>
+    Radius: <input type="text" id="rad">
+    </p>
+
+    <button type="button" onclick="myFunction()">Submit</button>
+    <p>Volume of the Sphere is:</p>
+    <p id="demo"></p>
+      
+    <button type="button" onclick="goMenu()">Home</button>
+
+    <script>
+
+    //This function stores the input value for the radius of the sphere and uses the Math namespace object to calculate
+    //and set the volume of the sphere in the html
+    function myFunction() {
+        var x = document.getElementById("rad").value;
+        var y = Math.PI*Math.pow(x,3)*4/3;
+        document.getElementById("demo").innerHTML = y;
+    }
+
+    //Redirects page back to the menu page
+    function goMenu() {
+        window.location.href = '/'
+    }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="compsupangles.css">
+<style>
+h1 {
+    background-color: antiquewhite
+}
+body {
+    background-color: antiquewhite;
+}
+ 
+</style>
+</head>
+<body> 
+<h1>Determine Whether a Set of Angles is Complementary or Suplementary</h1>
+
+    <!--Input type is an integer or a float-->
+    <p>
+    Angle 1: <input type="text" id="a1">
+    </p>
+
+    <!--Input type is an integer or a float-->
+    <p>
+    Angle 2: <input type="text" id="a2">
+    </p>
+    
+    <button type="button" onclick="myFunction()">Submit</button>
+    <p>These angles are...</p>
+    
+    <p id="demo"></p>
+    
+    <button type="button" onclick="goMenu()">Home</button>
+
+    <script>
+
+    //This function retrieves the values of the two angles and uses conditional logic and algebra to determine 
+    //if the two angles are supplementary, complementary, or neither. 
+    function myFunction() {
+        var a = document.getElementById("a1").value;
+        var b = document.getElementById("a2").value;
+        if (parseInt(a)+parseInt(b) == 90) {
+            var w = "Complementary Angles";
+            document.getElementById("demo").innerHTML = w;
+        } else if (parseInt(a)+parseInt(b) == 180) {
+            var w = "Suplementary Angles";
+            document.getElementById("demo").innerHTML = w;
+        } else {
+            var w = "Neither Complementary nor Suplementary angles";
+            document.getElementById("demo").innerHTML = w;
+        }
+        
+    }
+
+    //Redirects page back to the menu page
+    function goMenu() {
+        window.location.href = '/'
+    }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+h1 {
+    background-color: antiquewhite
+}
+body {
+    background-color: antiquewhite;
+}
+ 
+</style>
+</head>
+<body> 
+
+<h1>Find the Missing Side of a Right Triangle</h1>
+
+    <p>Please enter values for any 2 text boxes and place a "?" into the third for the side you want to find.</p>
+
+    <p>
+    Vertical Side: <input type="text" id="a">
+    </p>
+
+    <p>
+    Horizontal Side: <input type="text" id="b">
+    </p>
+
+    <p>
+    Hypotenuse: <input type="text" id="c">
+    </p>
+
+    <button type="button" onclick="myFunction()">Submit</button>
+    <p>The value for the third side of this triangle is...</p>
+    
+    <p id="demo"></p>
+    
+    <button type="button" onclick="goMenu()">Home</button>
+
+    <script>
+
+    //This function stores the input values of the vertical side, horizontal side, and the hypotenuse into variables.
+    //It then uses conditional logic and algebra in order to calculate and set the value of the third side.
+    function myFunction() {
+        var a = document.getElementById("a").value;
+        var b = document.getElementById("b").value;
+        var c = document.getElementById("c").value;
+        if (c=='?') {
+            var w = Math.sqrt(Math.pow(a,2)+Math.pow(b,2));
+            document.getElementById("demo").innerHTML = w;
+        } else if (a=='?') {
+            var w = Math.sqrt(Math.pow(c,2)-Math.pow(b,2));
+            document.getElementById("demo").innerHTML = w;
+        } else if (b=='?') {
+            var w = Math.sqrt(Math.pow(c,2)-Math.pow(a,2));
+            document.getElementById("demo").innerHTML = w;
+        }
+        
+    }
+        
+    //Redirects page back to the menu page
+    function goMenu() {
+        window.location.href = '/'
+    }
+    </script>
+
+</body>
+</html>
